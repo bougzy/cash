@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,193 +27,200 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <style>
-        body {
-            padding-top: 220px; 
-        }
-
-        @media (max-width: 768px) {
-  .navbar .dropdown-menu {
-    max-height: 300px;  /* adjust as needed */
-    overflow-y: auto;
-    scrollbar-width: thin; /* For Firefox */
-  }
-
-  .navbar .dropdown-menu::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  .navbar .dropdown-menu::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 10px;
-  }
-
-  .navbar .dropdown-menu::-webkit-scrollbar-track {
-    background: transparent;
-  }
-}
-
-
-        @media (max-width: 768px) {
-            body {
-                padding-top: 270px;
-            }
-
-            .content {
-                flex-direction: column;
-            }
-
-            .text-section,
-            .image-section {
-               order: 2;
-                width: 100%;
-                padding: 0 15px;
-            }
-
-            .image-section {
-              order: 1;
-        width: 100%;
-        margin-top: 20px;
-            }
-        }
-
-        .container {
-            margin-top: 50px;
-        }
-
-        .header {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .text-section {
-            flex: 1;
-            padding: 20px;
-        }
-
-        .image-section {
-            flex: 1;
-            margin-bottom: 30px;
-        }
-
-        .image-section img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .btn-custom {
-            margin-top: 20px;
-            
-        }
-        .navbar .dropdown-menu {
-    border-radius: 0;
-    margin-top: 0;
-    padding: 20px;
-}
-.navbar-toggler {
-    border: none;
-}
-
-    </style>
 </head>
 
 <body>
-    <!-- Navbar Start -->
-<div class="container-fluid fixed-top px-0 bg-white shadow">
-    <div class="container px-0">
-        <!-- Top Bar -->
-        <div class="topbar bg-primary text-white py-2 px-3">
-            <div class="row align-items-center">
-                <!-- Contact Info -->
-                <div class="col-12 col-md-8 text-center text-md-start mb-2 mb-md-0">
-                    <div class="d-flex justify-content-center justify-content-md-start flex-wrap gap-3 small">
-                        <span><i class="fas fa-envelope me-2"></i>info@passionplus.com.au</span>
-                        <span><i class="fas fa-phone-alt me-2"></i>+61-426283681</span>
-                    </div>
-                </div>
+   
 
-                <!-- Social Icons -->
-                <div class="col-12 col-md-4 text-center text-md-end">
-                    <div class="d-flex justify-content-center justify-content-md-end gap-2">
-                        <a href="#" class="btn-square text-white"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="btn-square text-white"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="btn-square text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="btn-square text-white"><i class="fab fa-pinterest"></i></a>
-                        <a href="#" class="btn-square text-white"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
+     <!-- Navbar Start -->
+<style>
+  html, body {
+    overflow-x: hidden;
+  }
+
+  body {
+    padding-top: 220px;
+  }
+
+  .btn-square {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-square:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .navbar .dropdown-menu {
+    border-radius: 0;
+    margin-top: 0;
+    padding: 20px;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-collapse.collapse {
+    transition: height 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      padding-top: 270px;
+    }
+
+    .topbar {
+      padding: 10px 15px !important;
+    }
+
+    .navbar .dropdown-menu {
+      max-height: 300px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      padding: 10px;
+    }
+
+    .navbar .dropdown-menu::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .navbar .dropdown-menu::-webkit-scrollbar-thumb {
+      background-color: #fff;
+      border-radius: 10px;
+    }
+
+    .navbar .dropdown-menu::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .navbar-nav .nav-link {
+      padding: 10px 15px;
+      font-size: 1rem;
+    }
+
+    .navbar-brand {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      width: 100%;
+    }
+
+    .navbar-brand img {
+      margin-right: 0 !important;
+      margin-bottom: 10px;
+    }
+
+    .navbar-toggler {
+      align-self: flex-end;
+    }
+
+    .navbar-collapse {
+      width: 100%;
+    }
+  }
+</style>
+
+<div class="container-fluid fixed-top px-0 bg-white shadow">
+  <div class="container px-0">
+    <!-- Top Bar -->
+    <div class="topbar bg-primary text-white py-2 px-3">
+      <div class="row align-items-center">
+        <!-- Contact Info -->
+        <div class="col-12 col-md-8 text-center text-md-start mb-2 mb-md-0">
+          <div class="d-flex justify-content-center justify-content-md-start flex-wrap gap-3 small">
+            <span><i class="fas fa-envelope me-2"></i>info@passionplus.com.au</span>
+            <span><i class="fas fa-phone-alt me-2"></i>+61-426283681</span>
+          </div>
         </div>
 
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <!-- Brand -->
-                <a href="index.html" class="navbar-brand d-flex align-items-center">
-                    <img src="img/alogoo.png" alt="Logo" style="height: 80px; width: auto; margin-right: 10px;">
-                    <div>
-                        <h6 class="text-primary mb-0">Passion Plus Disability Service</h6>
-                        <small class="fst-italic text-muted d-none d-md-block">Care and support driven by passion</small>
-                    </div>
-                </a>
-
-                <!-- Toggler -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Nav Links -->
-                <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">HOME</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">ABOUT US</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="aboutpassionplus.html">About Passion Plus</a></li>
-                                <li><a class="dropdown-item" href="vision.html">Our Vision</a></li>
-                                <li><a class="dropdown-item" href="mission.html">Our Mission</a></li>
-                                <li><a class="dropdown-item" href="commitment.html">Our Commitment</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">SERVICES</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="service.html">Explore Our Services</a></li>
-                                <li><a class="dropdown-item" href="inhome.html">In-Home Care And Support Services</a></li>
-                                <li><a class="dropdown-item" href="support.html">Supported Independent Living</a></li>
-                                <li><a class="dropdown-item" href="care.html">Disability Care & Support</a></li>
-                                <li><a class="dropdown-item" href="assist.html">Assistance With Daily Activities</a></li>
-                                <li><a class="dropdown-item" href="community.html">Community Participation</a></li>
-                                <li><a class="dropdown-item" href="transport.html">Transport/Travel Assistance</a></li>
-                                <li><a class="dropdown-item" href="employment.html">Employment And Education</a></li>
-                                <li><a class="dropdown-item" href="respite.html">Respite/Short Term Accommodation</a></li>
-                                <li><a class="dropdown-item" href="shared.html">Shared/Group Accommodation</a></li>
-                                <li><a class="dropdown-item" href="cleaning.html">Home Cleaning Services</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="referral.html">REFERRAL</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">CONTACT US</a>
-                        </li>
-                    </ul>
-                    <!-- <a href="#" class="btn btn-primary ms-lg-3 mt-3 mt-lg-0">Donate Now</a> -->
-                </div>
-            </div>
-        </nav>
+        <!-- Social Icons -->
+        <div class="col-12 col-md-4 text-center text-md-end">
+          <div class="d-flex justify-content-center justify-content-md-end gap-2">
+            <a href="#" class="btn-square text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="btn-square text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="btn-square text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="btn-square text-white"><i class="fab fa-pinterest"></i></a>
+            <a href="#" class="btn-square text-white"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <div class="container d-flex flex-column flex-lg-row align-items-start align-items-lg-center">
+        <!-- Logo -->
+        <a href="index.html" class="navbar-brand d-flex flex-column flex-lg-row align-items-start align-items-lg-center mb-2 mb-lg-0 w-100" style="color:darkblue;">
+          <img src="img/alogoo.png" alt="Logo" style="height: 80px; width: auto; margin-right: 10px;">
+          <div>
+            <h6 class=" mb-0" style="color:darkblue;">Passion Plus Disability Service</h6>
+            <small class="fst-italic" style="color: navy;">Care and support driven by passion</small>
+          </div>
+        </a>
+
+        <!-- Hamburger Menu Button -->
+        <button class="navbar-toggler ms-auto mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu Items -->
+        <div class="collapse navbar-collapse justify-content-end w-100" id="navbarCollapse">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">HOME</a>
+            </li>
+
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" style="color: #000;">ABOUT US</a>
+              <ul class="dropdown-menu" style="background: navy;">
+                <li><a class="dropdown-item" href="aboutpassionplus.html" style="color: white;">About Passion Plus</a></li>
+                <li><a class="dropdown-item" href="vision.html" style="color: white;">Our Vision</a></li>
+                <li><a class="dropdown-item" href="mission.html" style="color: white;">Our Mission</a></li>
+                <li><a class="dropdown-item" href="commitment.html" style="color: white;">Our Commitment</a></li>
+              </ul>
+            </li>
+
+            <!-- Services Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" style="color: #000;">SERVICES</a>
+              <ul class="dropdown-menu" style="background: navy;">
+                <li><a class="dropdown-item" href="service.html" style="color: white;">Explore Our Services</a></li>
+                <li><a class="dropdown-item" href="inhome.html" style="color: white;">In-Home Care And Support Services</a></li>
+                <li><a class="dropdown-item" href="support.html" style="color: white;">Supported Independent Living</a></li>
+                <li><a class="dropdown-item" href="care.html" style="color: white;">Disability Care & Support</a></li>
+                <li><a class="dropdown-item" href="assist.html" style="color: white;">Assistance With Daily Activities</a></li>
+                <li><a class="dropdown-item" href="community.html" style="color: white;">Community Participation</a></li>
+                <li><a class="dropdown-item" href="transport.html" style="color: white;">Transport/Travel Assistance</a></li>
+                <li><a class="dropdown-item" href="employment.html" style="color: white;">Employment And Education</a></li>
+                <li><a class="dropdown-item" href="respite.html" style="color: white;">Respite/Short Term Accommodation</a></li>
+                <li><a class="dropdown-item" href="shared.html" style="color: white;">Shared/Group Accommodation</a></li>
+                <li><a class="dropdown-item" href="cleaning.html" style="color: white;">Home Cleaning Services</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html" style="color: #000;">CONTACT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn-hover-bg btn  text-white py-2 px-4"  href="referral.html" style="background-color: navy; color:white;">REFERRAL</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
 </div>
 <!-- Navbar End -->
+
 
     <!-- Services Start -->
     <main class="container">
@@ -256,8 +265,11 @@
     </main>
     <!-- Services End -->
 
-    <!-- Footer Start -->
-<div class="container-fluid footer bg-dark text-body py-5">
+    
+    
+
+  <!-- Footer Start -->
+<div class="container-fluid footer text-white py-5" style="background: navy;">
     <div class="container py-5">
         <div class="row g-5">
             <!-- Newsletter -->
@@ -303,49 +315,49 @@
                     <div class="row g-2">
                         <div class="col-4">
                             <div class="footer-gallery">
-                                <img src="img/gallery-footer-1.jpg" class="img-fluid w-100" alt="">
+                                <img src="img/a012.png" class="img-fluid w-100" alt="">
                                 <div class="footer-search-icon">
-                                    <a href="img/gallery-footer-1.jpg" data-lightbox="footerGallery-1"><i class="fas fa-search-plus text-white"></i></a>
+                                    <a href="img/a14.jpeg" data-lightbox="footerGallery-1"><i class="fas fa-search-plus text-white"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="footer-gallery">
-                                <img src="img/gallery-footer-2.jpg" class="img-fluid w-100" alt="">
+                                <img src="img/a18.jpeg" class="img-fluid w-100" alt="">
                                 <div class="footer-search-icon">
-                                    <a href="img/gallery-footer-2.jpg" data-lightbox="footerGallery-2"><i class="fas fa-search-plus text-white"></i></a>
+                                    <a href="img/a15.jpeg" data-lightbox="footerGallery-2"><i class="fas fa-search-plus text-white"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="footer-gallery">
-                                <img src="img/gallery-footer-3.jpg" class="img-fluid w-100" alt="">
+                                <img src="img/v1.png" class="img-fluid w-100" alt="">
                                 <div class="footer-search-icon">
-                                    <a href="img/gallery-footer-3.jpg" data-lightbox="footerGallery-3"><i class="fas fa-search-plus text-white"></i></a>
+                                    <a href="img/v2.png" data-lightbox="footerGallery-3"><i class="fas fa-search-plus text-white"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="footer-gallery">
-                                <img src="img/gallery-footer-4.jpg" class="img-fluid w-100" alt="">
+                                <img src="img/z2.png" class="img-fluid w-100" alt="">
                                 <div class="footer-search-icon">
-                                    <a href="img/gallery-footer-4.jpg" data-lightbox="footerGallery-4"><i class="fas fa-search-plus text-white"></i></a>
+                                    <a href="img/a02.png" data-lightbox="footerGallery-4"><i class="fas fa-search-plus text-white"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="footer-gallery">
-                                <img src="img/gallery-footer-5.jpg" class="img-fluid w-100" alt="">
+                                <img src="img/a04.png" class="img-fluid w-100" alt="">
                                 <div class="footer-search-icon">
-                                    <a href="img/gallery-footer-5.jpg" data-lightbox="footerGallery-5"><i class="fas fa-search-plus text-white"></i></a>
+                                    <a href="img/a014.png" data-lightbox="footerGallery-5"><i class="fas fa-search-plus text-white"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="footer-gallery">
-                                <img src="img/gallery-footer-6.jpg" class="img-fluid w-100" alt="">
+                                <img src="img/a012.png" class="img-fluid w-100" alt="">
                                 <div class="footer-search-icon">
-                                    <a href="img/gallery-footer-6.jpg" data-lightbox="footerGallery-6"><i class="fas fa-search-plus text-white"></i></a>
+                                    <a href="img/a01.png" data-lightbox="footerGallery-6"><i class="fas fa-search-plus text-white"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -357,8 +369,10 @@
 </div>
 <!-- Footer End -->
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-md-square back-to-top" style="background: rgb(1, 1, 46); color: white;"><i class="fa fa-arrow-up"></i></a>   
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -373,3 +387,15 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
+
+
+
+ <!-- <section class="mission-section">
+    <img src="img/z2.png" alt="Mission" class="mission-image">
+    <h3 class="mission-heading text-uppercase">Our Vision</h3>
+    <p class="mission-text">
+     Our vision is to build a long-lasting reputation of quality support services that adequately meet the needs of the people we serve.With commitment driven by passion, we explore opportunities to reach the unreached individuals with disabilities, ensuring they are empowered to enjoy equal opportunities and full inclusion in the community. We aim to work collaboratively with clients and their families to ensure the best possible outcomes.
+
+    </p>
+  </section> -->

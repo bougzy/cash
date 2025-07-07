@@ -38,136 +38,370 @@
         <!-- Spinner End -->
 
 
-         <!-- Navbar start -->
-      <div class="container-fluid fixed-top px-0">
+         <!-- Navbar Start -->
+<style>
+  html, body {
+    overflow-x: hidden;
+  }
+
+  body {
+    padding-top: 220px;
+  }
+
+  .btn-square {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-square:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .navbar .dropdown-menu {
+    border-radius: 0;
+    margin-top: 0;
+    padding: 20px;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-collapse.collapse {
+    transition: height 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      padding-top: 270px;
+    }
+
+    .topbar {
+      padding: 10px 15px !important;
+    }
+
+    .navbar .dropdown-menu {
+      max-height: 300px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      padding: 10px;
+    }
+
+    .navbar .dropdown-menu::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .navbar .dropdown-menu::-webkit-scrollbar-thumb {
+      background-color: #fff;
+      border-radius: 10px;
+    }
+
+    .navbar .dropdown-menu::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .navbar-nav .nav-link {
+      padding: 10px 15px;
+      font-size: 1rem;
+    }
+
+    .navbar-brand {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      width: 100%;
+    }
+
+    .navbar-brand img {
+      margin-right: 0 !important;
+      margin-bottom: 10px;
+    }
+
+    .navbar-toggler {
+      align-self: flex-end;
+    }
+
+    .navbar-collapse {
+      width: 100%;
+    }
+  }
+</style>
+
+<div class="container-fluid fixed-top px-0 bg-white shadow">
   <div class="container px-0">
     <!-- Top Bar -->
-    <div class="topbar">
-      <div class="row align-items-center justify-content-center">
-        <div class="col-md-8">
-          <div class="topbar-info d-flex flex-wrap">
-            <a href="#" class="text-light me-4">
-              <i class="fas fa-envelope text-white me-2"></i>info@passionplus.com.au
-            </a>
-            <a href="#" class="text-light">
-              <i class="fas fa-phone-alt text-white me-2"></i>+61-426283681
-            </a>
+    <div class="topbar bg-primary text-white py-2 px-3">
+      <div class="row align-items-center">
+        <!-- Contact Info -->
+        <div class="col-12 col-md-8 text-center text-md-start mb-2 mb-md-0">
+          <div class="d-flex justify-content-center justify-content-md-start flex-wrap gap-3 small">
+            <span><i class="fas fa-envelope me-2"></i>info@passionplus.com.au</span>
+            <span><i class="fas fa-phone-alt me-2"></i>+61-426283681</span>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="topbar-icon d-flex align-items-center justify-content-end">
-            <a href="#" class="btn-square text-white me-2"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="btn-square text-white me-2"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="btn-square text-white me-2"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="btn-square text-white me-2"><i class="fab fa-pinterest"></i></a>
-            <a href="#" class="btn-square text-white me-0"><i class="fab fa-linkedin-in"></i></a>
+
+        <!-- Social Icons -->
+        <div class="col-12 col-md-4 text-center text-md-end">
+          <div class="d-flex justify-content-center justify-content-md-end gap-2">
+            <a href="#" class="btn-square text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="btn-square text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="btn-square text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="btn-square text-white"><i class="fab fa-pinterest"></i></a>
+            <a href="#" class="btn-square text-white"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-light bg-light navbar-expand-xl">
-      <a href="index.html" class="navbar-brand ms-3 d-flex align-items-center">
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <div class="container d-flex flex-column flex-lg-row align-items-start align-items-lg-center">
         <!-- Logo -->
-        <img src="img/alogoo.png" alt="Passion Plus Logo" style="height: 100px; width: auto; margin-right: 15px;" />
-        <div>
-          <h3 class="text-primary mt-5">Passion Plus Disability Service</h3>
-          <small class="fst-italic text-muted">Care and support driven by passion</small>
-        </div>
-      </a>
-      <button class="navbar-toggler py-2 px-3 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="fa fa-bars text-primary"></span>
-      </button>
-      <div class="collapse navbar-collapse bg-light" id="navbarCollapse">
-        <div class="navbar-nav ms-auto">
-          <a href="index.html" class="nav-item nav-link active">Home</a>
-          <a href="about.html" class="nav-item nav-link">About</a>
-          <a href="service.html" class="nav-item nav-link">Services</a>
-          <a href="causes.html" class="nav-item nav-link">Causes</a>
-          <a href="events.html" class="nav-item nav-link">Events</a>
-          <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-            <div class="dropdown-menu m-0 bg-secondary rounded-0">
-              <a href="blog.html" class="dropdown-item">Blog</a>
-              <a href="gallery.html" class="dropdown-item">Gallery</a>
-              <a href="volunteer.html" class="dropdown-item">Volunteers</a>
-              <a href="donation.html" class="dropdown-item">Donation</a>
-              <a href="404.html" class="dropdown-item">404 Error</a>
-            </div>
+        <a href="index.html" class="navbar-brand d-flex flex-column flex-lg-row align-items-start align-items-lg-center mb-2 mb-lg-0 w-100" style="color:darkblue;">
+          <img src="img/alogoo.png" alt="Logo" style="height: 80px; width: auto; margin-right: 10px;">
+          <div>
+            <h6 class=" mb-0" style="color:darkblue;">Passion Plus Disability Service</h6>
+            <small class="fst-italic" style="color: navy;">Care and support driven by passion</small>
           </div>
-          <a href="contact.html" class="nav-item nav-link">Contact</a>
-        </div>
-        <div class="d-flex align-items-center flex-nowrap pt-xl-0" style="margin-left: 15px;">
-          <a href="" class="btn-hover-bg btn btn-primary text-white py-2 px-4 me-3">Donate Now</a>
+        </a>
+
+        <!-- Hamburger Menu Button -->
+        <button class="navbar-toggler ms-auto mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu Items -->
+        <div class="collapse navbar-collapse justify-content-end w-100" id="navbarCollapse">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">HOME</a>
+            </li>
+
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" style="color: #000;">ABOUT US</a>
+              <ul class="dropdown-menu" style="background: navy;">
+                <li><a class="dropdown-item" href="aboutpassionplus.html" style="color: white;">About Passion Plus</a></li>
+                <li><a class="dropdown-item" href="vision.html" style="color: white;">Our Vision</a></li>
+                <li><a class="dropdown-item" href="mission.html" style="color: white;">Our Mission</a></li>
+                <li><a class="dropdown-item" href="commitment.html" style="color: white;">Our Commitment</a></li>
+              </ul>
+            </li>
+
+            <!-- Services Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" style="color: #000;">SERVICES</a>
+              <ul class="dropdown-menu" style="background: navy;">
+                <li><a class="dropdown-item" href="service.html" style="color: white;">Explore Our Services</a></li>
+                <li><a class="dropdown-item" href="inhome.html" style="color: white;">In-Home Care And Support Services</a></li>
+                <li><a class="dropdown-item" href="support.html" style="color: white;">Supported Independent Living</a></li>
+                <li><a class="dropdown-item" href="care.html" style="color: white;">Disability Care & Support</a></li>
+                <li><a class="dropdown-item" href="assist.html" style="color: white;">Assistance With Daily Activities</a></li>
+                <li><a class="dropdown-item" href="community.html" style="color: white;">Community Participation</a></li>
+                <li><a class="dropdown-item" href="transport.html" style="color: white;">Transport/Travel Assistance</a></li>
+                <li><a class="dropdown-item" href="employment.html" style="color: white;">Employment And Education</a></li>
+                <li><a class="dropdown-item" href="respite.html" style="color: white;">Respite/Short Term Accommodation</a></li>
+                <li><a class="dropdown-item" href="shared.html" style="color: white;">Shared/Group Accommodation</a></li>
+                <li><a class="dropdown-item" href="cleaning.html" style="color: white;">Home Cleaning Services</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html" style="color: #000;">CONTACT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn-hover-bg btn  text-white py-2 px-4"  href="referral.html" style="background-color: navy; color:white;">REFERRAL</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
   </div>
 </div>
-        <!-- Navbar End -->
+<!-- Navbar End -->
 
         <!-- Services Start -->
-        <div class="container-fluid service py-5 bg-light">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5" style="max-width: 800px;">
-                    <h5 class="text-uppercase text-primary">What we do</h5>
-                    <h1 class="mb-0">What we do to protect environment</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="service-item">
-                            <img src="img/service-1.jpg" class="img-fluid w-100" alt="Image">
-                            <div class="service-link">
-                                <a href="#" class="h4 mb-0">Raising money to help</a>
-                            </div>
-                        </div>
-                        <p class="my-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        </p>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="service-item">
-                            <img src="img/service-2.jpg" class="img-fluid w-100" alt="Image">
-                            <div class="service-link">
-                                <a href="#" class="h4 mb-0"> close work with services</a>
-                            </div>
-                        </div>
-                        <p class="my-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        </p>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="service-item">
-                            <img src="img/service-3.jpg" class="img-fluid w-100" alt="Image">
-                            <div class="service-link">
-                                <a href="#" class="h4 mb-0">Pro Guided tours only</a>
-                            </div>
-                        </div>
-                        <p class="my-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        </p>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="service-item">
-                            <img src="img/service-4.jpg" class="img-fluid w-100" alt="Image">
-                            <div class="service-link">
-                                <a href="#" class="h4 mb-0">Protecting animal area</a>
-                            </div>
-                        </div>
-                        <p class="my-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        </p>
-                    </div>
-                    <div class="col-12">
-                        <div class="d-flex align-items-center justify-content-center">
-                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        
+         <style>
+   
+
+    h1 {
+      font-weight: bold;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .accordion-button {
+      background-color: navy !important;
+      color: #fff !important;
+      font-weight: bold;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px !important;
+    }
+
+    .accordion-button::after {
+      content: '+';
+      font-size: 20px;
+      color: #fff;
+      transform: none;
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-button:not(.collapsed)::after {
+      content: '×';
+      transform: rotate(0deg);
+    }
+
+    .accordion-body {
+      background-color: #f5f3e6;
+      border-radius: 0 0 12px 12px;
+      font-size: 16px;
+      text-align: left;
+      color: #333;
+      
+    }
+
+    .accordion-item {
+      border: none;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+  </style>
+
+
+  <h1>COMING ONBOARD</h1>
+
+  <div class="accordion container" id="onboardingAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          Step 1 : Receive Referral
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+           data-bs-parent="#onboardingAccordion">
+        <div class="accordion-body">
+         Our process  begins with a referral from the participant themselves, a Local Area Coordinator (LAC) or a support coordinator
         </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Step 2 : Information Gathering/Plan Review
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+           data-bs-parent="#onboardingAccordion">
+        <div class="accordion-body">
+          We will organise a meeting with the participant, their family, or other support networks to gather information about the participant's needs, goals, and current situation. 
+This may include a review and understanding of any existing NDIS plan.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Step 3 : Assessment of Participant Needs, Goals and Planning
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+           data-bs-parent="#onboardingAccordion">
+        <div class="accordion-body">
+         <h5>This Involves:</h5>
+         <p>
+Assessment of  Client's Need: We ensure we carry out a detailed assessment of the participant's needs, including their, goals, functional capacity, and desired outcomes.
+Goal Setting: Participants work with Passion Plus to identify and set specific goals.
+Support Plan Development: From the outcome of our assessment and goal setting, a support plan is developed that outlines the specific supports and services required. This is a person-centered Support Plan, tailored to the individual's unique needs, choices and preferences.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Step 4 : Implementation and Review
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+           data-bs-parent="#onboardingAccordion">
+                <div class="accordion-body">
+  <p><strong>This Involves:</strong></p>
+  <ul>
+    <li><strong>Service Agreements:</strong> Providers will create service agreements that clearly outline the services to be provided, costs, and responsibilities of both parties.</li>
+    <li><strong>Service Delivery:</strong> Participants begin receiving the supports and services outlined in their plan.</li>
+    <li><strong>Regular Monitoring and Review:</strong> The support plan is regularly reviewed and updated to ensure it remains effective and meets the participant's changing needs.</li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Step 5: Ongoing Support and Monitoring
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+           data-bs-parent="#onboardingAccordion">
+        <div class="accordion-body">
+  <ul>
+    <li><strong>Open Communication:</strong> Providers should maintain open communication with participants, their families, and other support networks.</li>
+    <li><strong>Capacity Building:</strong> The onboarding process should also focus on building the participant's capacity to manage their own supports and make informed decisions.</li>
+    <li><strong>Feedback and Complaints:</strong> Participants should have access to clear feedback and complaints mechanisms.</li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSix">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          Step 6 : Regular Plan review for Effectiveness or As needed for needed change:
+        </button>
+      </h2>
+      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+           data-bs-parent="#onboardingAccordion">
+        <div class="accordion-body">
+  <ul>
+    <li><strong>Person-centered approach:</strong> The process should be tailored to the individual's unique needs and preferences, putting them at the center of decision-making.</li>
+    <li><strong>Clear communication:</strong> Participants should understand the process, their rights, and how to access support.</li>
+    <li><strong>Building trust and rapport:</strong> Providers should build strong relationships with participants based on trust and respect.</li>
+    <li><strong>Focus on participant choice and control:</strong> Participants should have choice and control over their supports and services.</li>
+    <li><strong>Ensuring safety and well-being:</strong> The process should prioritize the safety and well-being of participants at all times.</li>
+  </ul>
+</div>
+      </div>
+    </div>
+  </div>
+
+
+
         <!-- Services End -->
 
 
-        <!-- Footer Start -->
-<div class="container-fluid footer bg-dark text-body py-5">
+          <!-- Footer Start -->
+<div class="container-fluid footer text-white py-5" style="background: navy;">
     <div class="container py-5">
         <div class="row g-5">
             <!-- Newsletter -->
@@ -213,49 +447,49 @@
                     <div class="row g-2">
                         <div class="col-4">
                             <div class="footer-gallery">
-                                <img src="img/gallery-footer-1.jpg" class="img-fluid w-100" alt="">
+                                <img src="img/a012.png" class="img-fluid w-100" alt="">
                                 <div class="footer-search-icon">
-                                    <a href="img/gallery-footer-1.jpg" data-lightbox="footerGallery-1"><i class="fas fa-search-plus text-white"></i></a>
+                                    <a href="img/a14.jpeg" data-lightbox="footerGallery-1"><i class="fas fa-search-plus text-white"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="footer-gallery">
-                                <img src="img/gallery-footer-2.jpg" class="img-fluid w-100" alt="">
+                                <img src="img/a18.jpeg" class="img-fluid w-100" alt="">
                                 <div class="footer-search-icon">
-                                    <a href="img/gallery-footer-2.jpg" data-lightbox="footerGallery-2"><i class="fas fa-search-plus text-white"></i></a>
+                                    <a href="img/a15.jpeg" data-lightbox="footerGallery-2"><i class="fas fa-search-plus text-white"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="footer-gallery">
-                                <img src="img/gallery-footer-3.jpg" class="img-fluid w-100" alt="">
+                                <img src="img/v1.png" class="img-fluid w-100" alt="">
                                 <div class="footer-search-icon">
-                                    <a href="img/gallery-footer-3.jpg" data-lightbox="footerGallery-3"><i class="fas fa-search-plus text-white"></i></a>
+                                    <a href="img/v2.png" data-lightbox="footerGallery-3"><i class="fas fa-search-plus text-white"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="footer-gallery">
-                                <img src="img/gallery-footer-4.jpg" class="img-fluid w-100" alt="">
+                                <img src="img/z2.png" class="img-fluid w-100" alt="">
                                 <div class="footer-search-icon">
-                                    <a href="img/gallery-footer-4.jpg" data-lightbox="footerGallery-4"><i class="fas fa-search-plus text-white"></i></a>
+                                    <a href="img/a02.png" data-lightbox="footerGallery-4"><i class="fas fa-search-plus text-white"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="footer-gallery">
-                                <img src="img/gallery-footer-5.jpg" class="img-fluid w-100" alt="">
+                                <img src="img/a04.png" class="img-fluid w-100" alt="">
                                 <div class="footer-search-icon">
-                                    <a href="img/gallery-footer-5.jpg" data-lightbox="footerGallery-5"><i class="fas fa-search-plus text-white"></i></a>
+                                    <a href="img/a014.png" data-lightbox="footerGallery-5"><i class="fas fa-search-plus text-white"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="footer-gallery">
-                                <img src="img/gallery-footer-6.jpg" class="img-fluid w-100" alt="">
+                                <img src="img/a012.png" class="img-fluid w-100" alt="">
                                 <div class="footer-search-icon">
-                                    <a href="img/gallery-footer-6.jpg" data-lightbox="footerGallery-6"><i class="fas fa-search-plus text-white"></i></a>
+                                    <a href="img/a01.png" data-lightbox="footerGallery-6"><i class="fas fa-search-plus text-white"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -268,8 +502,9 @@
 <!-- Footer End -->
 
 
+
         <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+        <a href="#" class="btn btn-md-square back-to-top" style="background: rgb(1, 1, 46); color: white;"><i class="fa fa-arrow-up"></i></a>   
 
         
         <!-- JavaScript Libraries -->
