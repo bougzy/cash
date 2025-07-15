@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,14 +19,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 
     <style>
         body {
@@ -37,14 +40,24 @@
     scrollbar-width: thin; /* For Firefox */
   }
 
-  
+  .navbar .dropdown-menu::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .navbar .dropdown-menu::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+
+  .navbar .dropdown-menu::-webkit-scrollbar-track {
+    background: transparent;
+  }
 }
 
 
         @media (max-width: 768px) {
             body {
                 padding-top: 270px;
-                
             }
 
             .content {
@@ -66,14 +79,14 @@
         }
 
         .container {
-            /* margin-top: 50px; */
+            margin-top: 0px;
         }
 
         .header {
             font-size: 2.5em;
             font-weight: bold;
             margin-bottom: 20px;
-            color: #000;
+            margin-top: 80px;
         }
 
         .content {
@@ -85,7 +98,6 @@
         .text-section {
             flex: 1;
             padding: 20px;
-            color: #000;
         }
 
         .image-section {
@@ -102,22 +114,29 @@
             margin-top: 20px;
             
         }
-        
+        .navbar .dropdown-menu {
+    border-radius: 0;
+    margin-top: 0;
+    padding: 20px;
+}
+.navbar-toggler {
+    border: none;
+}
 
     </style>
 </head>
 
 <body>
+    
 
-
-   <!-- Spinner Start -->
+  <!-- Spinner Start -->
         <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
             <div class="spinner-grow text-primary" role="status"></div>
         </div>
         <!-- Spinner End -->
 
-
-  <!-- Navbar Start -->
+     
+        <!-- Navbar Start -->
 <style>
   html, body {
     overflow-x: hidden;
@@ -235,7 +254,7 @@
     }
   }
 </style>
- 
+
 <div class="container-fluid fixed-top px-0 bg-white">
   <div class="container px-0">
     <!-- Top Bar -->
@@ -260,12 +279,16 @@
     <nav class="navbar navbar-expand-lg">
       <div class="d-flex w-100 justify-content-between align-items-center">
         <!-- Logo and Text -->
-        <a href="index.html" class="navbar-brand">
-          <img src="img/alogoo.png" alt="Logo" style="width: 130px; height: 130px;">
-          <div class="d-none d-md-block">
-            <h2 class="mb-0 fw-bold" style="color:darkblue;">Passion Plus Disability Service</h2>
-            <small class="fst-italic" style="color: navy; font-family: 'Cinzel Decorative', cursive;">Care and support driven by passion</small>
-          </div>
+        <a href="/home" class="navbar-brand">
+          <img src="/img/alogoo.png" alt="Logo" style="width: 130px; height: 130px;">
+           <div class="d-none d-md-block text-center" style="margin-top: 49px;">
+  <h2 class="fw-bold" style="color: darkblue; margin: 0; line-height: 0.6;">
+    Passion Plus Disability Services
+  </h2>
+  <small class="fst-italic" style="color: orange; font-family: 'Cinzel Decorative', cursive; margin: 0; line-height: 0.9;">
+    Care and support driven by passion
+  </small>
+</div>
         </a>
 
         <!-- Hamburger -->
@@ -275,40 +298,40 @@
       </div>
 
       <!-- Navigation Links -->
-      <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse" style="margin-top: 30px;">
         <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">HOME</a></li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" data-bs-toggle="dropdown">ABOUT US</a>
+            <a class="nav-link dropdown-toggle fw-bold" href="#" id="aboutDropdown" data-bs-toggle="dropdown">ABOUT US</a>
             <ul class="dropdown-menu bg-dark">
-              <li><a class="dropdown-item text-white" href="aboutpassionplus.html">About Passion Plus</a></li>
-              <li><a class="dropdown-item text-white" href="vision.html">Our Vision</a></li>
+              <li><a class="dropdown-item text-white" href="/aboutpassionplus">About Passion Plus</a></li>
+              <li><a class="dropdown-item text-white" href="/visionandmission">Our Vision & Mission</a></li>
               <!-- <li><a class="dropdown-item text-white" href="mission.html">Our Mission</a></li> -->
               <!-- <li><a class="dropdown-item text-white" href="commitment.html">Our Commitment</a></li> -->
             </ul>
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" data-bs-toggle="dropdown">SERVICES</a>
+            <a class="nav-link dropdown-toggle fw-bold" href="#" id="servicesDropdown" data-bs-toggle="dropdown">SERVICES</a>
             <ul class="dropdown-menu bg-dark">
-              <li><a class="dropdown-item text-white" href="service.html">Explore Our Services</a></li>
-              <li><a class="dropdown-item text-white" href="inhome.html">In-Home Care And Support Services</a></li>
-              <li><a class="dropdown-item text-white" href="support.html">Supported Independent Living</a></li>
-              <li><a class="dropdown-item text-white" href="care.html">Disability Care & Support</a></li>
-              <li><a class="dropdown-item text-white" href="assist.html">Assistance With Daily Activities</a></li>
-              <li><a class="dropdown-item text-white" href="community.html">Community Participation</a></li>
-              <li><a class="dropdown-item text-white" href="transport.html">Transport/Travel Assistance</a></li>
-              <li><a class="dropdown-item text-white" href="employment.html">Employment And Education</a></li>
-              <li><a class="dropdown-item text-white" href="respite.html">Respite/Short Term Accommodation</a></li>
-              <li><a class="dropdown-item text-white" href="shared.html">Shared/Group Accommodation</a></li>
-              <li><a class="dropdown-item text-white" href="cleaning.html">Home Cleaning Services</a></li>
+              <li><a class="dropdown-item text-white" href="/exploreourservices">Explore Our Services</a></li>
+              <li><a class="dropdown-item text-white" href="/inhome">In-Home Care And Support Services</a></li>
+              <li><a class="dropdown-item text-white" href="/support">Supported Independent Living</a></li>
+              <li><a class="dropdown-item text-white" href="/care">Disability Care & Support</a></li>
+              <li><a class="dropdown-item text-white" href="/assist">Assistance With Daily Activities</a></li>
+              <li><a class="dropdown-item text-white" href="/community">Community Participation</a></li>
+              <li><a class="dropdown-item text-white" href="/transport">Transport/Travel Assistance</a></li>
+              <li><a class="dropdown-item text-white" href="/employment">Employment And Education</a></li>
+              <li><a class="dropdown-item text-white" href="/respite">Respite/Short Term Accommodation</a></li>
+              <li><a class="dropdown-item text-white" href="/shared">Shared/Group Accommodation</a></li>
+              <li><a class="dropdown-item text-white" href="/cleaning">Home Cleaning Services</a></li>
             </ul>
           </li>
 
-          <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT US</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold" href="/contact-us">CONTACT US</a></li>
           <li class="nav-item">
-            <a class="btn px-4 text-white" href="referral.html" style="background: navy;">REFERRAL</a>
+            <a class="btn px-4 fw-bold text-white" href="/referral" style="background: navy;">REFERRAL</a>
           </li>
         </ul>
       </div>
@@ -316,112 +339,24 @@
   </div>
 </div>
 <!-- Navbar End -->
-   
 
 
-
-     <!-- hero-section -->
-          <section class="hero-section">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-              <h1 class="fw-bold text-white">Our Services</h1>
-              <div class="breadcrumb-text">
-                <a href="index.html" class="text-white text-decoration-none">Home</a> /
-                <a href="services.html" class="text-white text-decoration-none">Our Services</a>
-              </div>
-            </div>
-          </section>
-
-            <style>
-              .hero-section {
-                position: relative;
-                background: url('img/a23.jpg') center center/cover no-repeat;
-                height: 300px;
-                display: flex;
-                align-items: center;
-                color: white;
-              }
-
-              .hero-overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(to right, rgba(24, 49, 87, 0.9), rgba(24, 49, 87, 0.3));
-                z-index: 1;
-              }
-
-              .hero-content {
-                position: relative;
-                z-index: 2;
-                padding-left: 50px;
-              }
-
-              .breadcrumb-text {
-                font-size: 1rem;
-              }
-            </style>
-          <!-- hero-section -->
+      
 
 
+    
+    
 
-    <!-- Services Start -->
-    <main class="container">
-        <div class="header">In-Home Support Services</div>
-        <div class="content">
-            <div class="text-section">
-                  <p>
-                     Living independently in one's own home is a vital component of the NDIS program, and our In-Home Support Services make this a reality.
-                     Passion Plus offers a variety of household tasks on a daily or routine basis, customized to meet individual’s choices and specific needs, including:
-                  </p>
-                <ul>
-                <li>Meal Preparation/Cooking</li>
-                <li>Daily personal care support and dress-up</li>
-                <li>Cleaning and Laundry assistance</li>
-                <li>Shopping Activities</li>
-                <li>Attending Appointment/Errand assistance</li>
-                <li>Welfare/Emotional Checks - Routine or regular welfare check and offering encouragement.</li>
-               
-            </ul>
-                <p>Additionally, we support domestic chores, including Grooming, Dressing, Showering, etc.</p>
-                <a href="#" class="btn btn-primary btn-custom">Click here to send us a message</a>
-            </div>
-
-            <!-- Image Slider Start -->
-            <div id="imageCarousel" class="carousel slide image-section" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/a53.jpg" class="d-block w-100" alt="Support Services Image">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/a.png" class="d-block w-100" alt="Image 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/a64.jpg" class="d-block w-100" alt="Image 3">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-            </div>
-            <!-- Image Slider End -->
-        </div>
-    </main>
-    <!-- Services End -->
+     
 
 
      <style>
     body {
-      background-color: rgb(212, 170, 177);
-      margin-top: 80px;
+      background-color: #f8f9fa;
     }
 
     .form-wrapper {
-      margin-top: 0px;
+      margin-top: 50px;
       margin-bottom: 50px;
       display: flex;
       justify-content: center;
@@ -450,7 +385,7 @@
 
 <div class="container form-wrapper">
   <div class="form-section" style="background: rgb(206, 162, 169);">
-    <h3 class="mb-4 text-center text-black">Submit a Referral</h3>
+    <h3 class="mb-4 text-center">Submit a Referral</h3>
 
     <form>
 
@@ -522,14 +457,18 @@
 </div>
 
 
-       <!-- Footer Start -->
+
+
+   
+
+<!-- Footer Start -->
 <div class="container-fluid footer text-white py-5" style="background: rgb(1, 1, 46); border-style: none;">
     <div class="container py-5">
         <div class="row g-5">
             <!-- Newsletter -->
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item text-center">
-  <img src="img/alogoo.png" class="w-75 mb-1" />
+  <img src="/img/alogoo.png" class="w-75 mb-1" />
   <h4 class="text-white fw-bold mb-0" style="font-size: 1rem; line-height: 1.2;">
     Passion Plus Disability Services Pty Ltd
   </h4>
@@ -538,27 +477,28 @@
             </div>
 
             <!-- Our Services -->
-            <div class="col-md-6 col-lg-6 col-xl-3">
+             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
                     <h4 class="mb-4 text-white">Our Services</h4>
-                    <a href="#"><i class="fas fa-angle-right me-2"></i>In-Home Care And Support Services</a>
-                    <a href="#"><i class="fas fa-angle-right me-2"></i> Supported Independent Living</a>
-                    <a href="#"><i class="fas fa-angle-right me-2"></i> Disability Care & Support</a>
-                    <a href="#"><i class="fas fa-angle-right me-2"></i> Assistance With Daily Activities</a>
-                    <a href="#"><i class="fas fa-angle-right me-2"></i> Community Participation</a>
-                    <a href="#"><i class="fas fa-angle-right me-2"></i> Transport/Travel Assistance</a>
-                    <a href="#"><i class="fas fa-angle-right me-2"></i> Employment And Education</a>
-                    <a href="#"><i class="fas fa-angle-right me-2"></i> Respite/Short Term Accommodation</a>
-                    <a href="#"><i class="fas fa-angle-right me-2"></i> Shared/Group Accommodation</a>
-                    <a href="#"><i class="fas fa-angle-right me-2"></i> Home Cleaning Services</a>
+                    <a href="/inhome"><i class="fas fa-angle-right me-2"></i>In-Home Care And Support Services</a>
+                    <a href="/support"><i class="fas fa-angle-right me-2"></i> Supported Independent Living</a>
+                    <a href="/care"><i class="fas fa-angle-right me-2"></i> Disability Care & Support</a>
+                    <a href="/assist"><i class="fas fa-angle-right me-2"></i> Assistance With Daily Activities</a>
+                    <a href="/community"><i class="fas fa-angle-right me-2"></i> Community Participation</a>
+                    <a href="/transport"><i class="fas fa-angle-right me-2"></i> Transport/Travel Assistance</a>
+                    <a href="/employment"><i class="fas fa-angle-right me-2"></i> Employment And Education</a>
+                    <a href="/respite"><i class="fas fa-angle-right me-2"></i> Respite/Short Term Accommodation</a>
+                    <a href="/shared"><i class="fas fa-angle-right me-2"></i> Shared/Group Accommodation</a>
+                    <a href="/cleaning"><i class="fas fa-angle-right me-2"></i> Home Cleaning Services</a>
+                    <a href="/privacy"><i class="fas fa-angle-right me-2"></i> Policy</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
                     <h4 class="mb-4 text-white">About Us</h4>
-                    <a href="#"><i class="fas fa-angle-right me-2"></i>About Passion Plus</a>
-                    <a href="#"><i class="fas fa-angle-right me-2"></i>Vision</a>
-                    <a href="#"><i class="fas fa-angle-right me-2"></i>Commitment</a>
+                    <a href="/aboutpassionplus"><i class="fas fa-angle-right me-2"></i>About Passion Plus</a>
+                    <a href="/visionandmission"><i class="fas fa-angle-right me-2"></i>Vision</a>
+                    <a href="/visionandmission"><i class="fas fa-angle-right me-2"></i>Commitment</a>
                     
                 </div>
             </div>
@@ -636,27 +576,26 @@
 <!-- Footer End -->
 
 
+
         <!-- Back to Top -->
         <a href="#" class="btn btn-md-square back-to-top" style="background: rgb(1, 1, 31); color: white;"><i class="fa fa-arrow-up"></i></a>   
 
-
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-md-square back-to-top" style="background: rgb(1, 1, 46); color: white;"><i class="fa fa-arrow-up"></i></a>   
+  
 
 
     
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
+
+
