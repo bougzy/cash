@@ -301,7 +301,7 @@
       <!-- Navigation Links -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse" style="margin-top: 30px;">
         <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link active fw-bold" href="/home">HOME</a></li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle fw-bold" href="#" id="aboutDropdown" data-bs-toggle="dropdown">ABOUT US</a>
@@ -424,42 +424,41 @@
         <!-- Contact End -->
 
 
-        <!-- WhatsApp Floating Button -->
-<main>
-    <style>
-    .whatsapp-float {
+       <main>
+  <style>
+    .message-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
       z-index: 1000;
     }
 
-    .whatsapp-btn {
-      background-color: #25D366;
+    .message-btn {
+      background-color: #c99d23; /* Deep dark background */
       color: white;
-      font-size: 20px;
-      padding: 12px 18px;
+      font-size: 16px;
+      padding: 12px 20px;
       border-radius: 50px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       display: flex;
       align-items: center;
-      gap: 10px;
       text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
 
-    .whatsapp-btn:hover {
-      background-color: #1ebc59;
+    .message-btn:hover {
+      background-color: #000;
       text-decoration: none;
     }
   </style>
-<div class="whatsapp-float">
-  <a href="https://wa.me/61426283681" target="_blank" class="whatsapp-btn">
-    <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png"/>
-    Chat with us
-  </a>
-</div>
+
+  <div class="message-float">
+    <a href="/contact" class="message-btn">
+      Send us a message
+    </a>
+  </div>
 </main>
-<!-- WhatsApp Floating Button -->
 
 
       <!-- Footer Start -->
@@ -498,8 +497,8 @@
                 <div class="footer-item d-flex flex-column">
                     <h4 class="mb-4 text-white">About Us</h4>
                     <a href="/aboutpassionplus"><i class="fas fa-angle-right me-2"></i>About Passion Plus</a>
-                    <a href="/visionandmission"><i class="fas fa-angle-right me-2"></i>Vision</a>
-                    <a href="/visionandmission"><i class="fas fa-angle-right me-2"></i>Commitment</a>
+                    <a href="/visionandmission"><i class="fas fa-angle-right me-2"></i>Our Vision & Mission</a>
+                    <!-- <a href="/visionandmission"><i class="fas fa-angle-right me-2"></i>Commitment</a> -->
                     
                 </div>
             </div>
