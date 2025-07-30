@@ -415,37 +415,77 @@
             </div>
           </section>
 
-            <style>
-              .hero-section {
-                position: relative;
-                background: url('/img/asp.jpeg') center center/cover no-repeat;
-                height: 300px;
-                display: flex;
-                align-items: center;
-                color: white;
-                margin-top: 171px;
-              }
+            
+<style>
+  /* Reset margin and padding globally */
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
 
-              .hero-overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(to right, rgba(24, 49, 87, 0.9), rgba(24, 49, 87, 0.3));
-                z-index: 1;
-              }
+  /* Hero section styling */
+  .hero-section {
+    position: relative;
+    background: url('/img/asp.jpeg') center center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center; /* vertical centering */
+    justify-content: left; /* horizontal centering */
+    color: white;
+    margin-top: 200px !important;
+    padding-top: 0 !important;
+    text-align: center;
+  }
 
-              .hero-content {
-                position: relative;
-                z-index: 2;
-                padding-left: 50px;
-              }
+  /* Gradient overlay */
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(24, 49, 87, 0.9), rgba(24, 49, 87, 0.3));
+    z-index: 1;
+  }
 
-              .breadcrumb-text {
-                font-size: 1rem;
-              }
-            </style>
+  /* Content inside the hero */
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 50px 40px; /* Padding to avoid edge crowding */
+    max-width: 90%;
+    margin-top: 10px;
+  }
+
+  /* Text style for breadcrumb */
+  .breadcrumb-text {
+    font-size: 1rem;
+  }
+
+  /* Ensure no space appears on mobile either */
+  @media (max-width: 768px) {
+    .hero-section {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+
+    .hero-content {
+      padding: 0 10px;
+      margin-top: 160px;
+      
+    }
+
+    .hero-section {
+    position: relative;
+    background: url('/img/asp.jpeg') center center/cover no-repeat;
+    height: 400px;
+    margin-top: 0px;
+   
+  }
+
+  
+  }
+</style>
           <!-- hero-section -->
 
 
