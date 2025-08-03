@@ -47,9 +47,13 @@
 
         <!-- Navbar Start -->
 
+<style>
+  /* html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  } */
 
-        <style>
-  /* Global Styles */
   body {
     /* padding-top: 180px; */
   }
@@ -69,6 +73,16 @@
     color: white;
     padding: 10px 15px;
   }
+
+   .brand-slogan {
+  font-size: 28px;
+  color: rgba(112, 74, 2, 0.973);
+  font-family: 'Dancing Script', cursive;
+  font-style: normal;
+  margin-top: 12px;
+  line-height: 1;
+  font-weight: bold;
+}
 
   .btn-square {
     display: inline-flex;
@@ -145,53 +159,57 @@
     white-space: nowrap;
   }
 
-  .brand-text-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 5;
-    margin-bottom: 40px;
+  @media (max-width: 768px) {
+    body {
+      /* padding-top: 230px; */
+    }
+
+    .navbar-brand {
+      flex-direction: row !important;
+      align-items: center !important;
+    }
+
+    .navbar-brand img {
+      margin-bottom: 0 !important;
+    }
+  
+
+  .navbar-brand {
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
   }
 
+  .navbar-brand img {
+    height: 50px !important;
+    width: auto !important;
+    margin-top: 15px;
+  }
+
+  
+
   .brand-title {
-    font-size: 17px;
+    font-size: 16px !important;
     font-weight: bold;
     color: darkblue;
-    margin: 0;
+    /* margin-top: -38px; */
+     
   }
 
   .brand-slogan {
   font-size: 18px;
-  color: rgb(207, 139, 12);
+  color: rgba(112, 74, 2, 0.973);
   font-family: 'Dancing Script', cursive;
   font-style: normal;
-  margin-top: 12px;
   line-height: 1;
   font-weight: bold;
 }
 
-
-  @media (max-width: 768px) {
-    .navbar-brand {
-      flex-direction: row !important;
-      align-items: center !important;
-      gap: 5px;
-    }
-
-    .navbar-brand img {
-      height: 50px !important;
-      width: auto !important;
-      margin-bottom: 0 !important;
-    }
-
-    .navbar-toggler {
-      margin-left: auto;
-    }
-
-    body {
-      /* padding-top: 230px; */
-    }
+  .navbar-toggler {
+    margin-left: auto;
+    margin-top: 25px;
   }
+}
 </style>
 
 <div class="container-fluid fixed-top px-0 bg-white">
@@ -202,7 +220,8 @@
         <div class="col-12 col-md-8 text-center text-md-end mb-2 mb-md-0">
           <div class="d-flex justify-content-center justify-content-md-end flex-wrap gap-3 small">
             <span><i class="fas fa-envelope me-2"></i>info@passionplus.com.au</span>
-            <span><i class="fas fa-phone-alt me-2"></i>+61493388366</span>
+            <!-- <span><i class="fas fa-phone-alt me-2"></i>+61-426283681</span> -->
+          <span><i class="fas fa-phone-alt me-2"></i>+61493388366</span>
           </div>
         </div>
         <div class="col-12 col-md-4 text-center text-md-end">
@@ -220,14 +239,16 @@
         <!-- Logo and Text -->
         <a href="/home" class="navbar-brand">
           <img src="/img/alogoo.png" alt="Logo" style="width: 130px; height: 130px;">
-          <div class="brand-text-wrapper text-center" style="margin-top: 49px;">
+           <div class="brand-text-wrapper text-center" style="margin-top: 49px;">
             <h2 class="fw-bold brand-title" style="color: darkblue; margin-top: 12px; line-height: 0.6;">
               Passion Plus Disability Services
             </h2>
-            <small class="brand-slogan">
+            <small class="fst-italic brand-slogan" style="  margin-top: 12px; line-height: 0.9; font-weight: bolder;" >
               Care and support driven by passion
             </small>
           </div>
+          
+
         </a>
 
         <!-- Hamburger -->
@@ -246,6 +267,8 @@
             <ul class="dropdown-menu bg-dark">
               <li><a class="dropdown-item text-white" href="/aboutpassionplus">About Passion Plus</a></li>
               <li><a class="dropdown-item text-white" href="/visionandmission">Our Vision & Mission</a></li>
+              <!-- <li><a class="dropdown-item text-white" href="mission.html">Our Mission</a></li> -->
+              <!-- <li><a class="dropdown-item text-white" href="commitment.html">Our Commitment</a></li> -->
             </ul>
           </li>
 
