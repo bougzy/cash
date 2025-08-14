@@ -32,6 +32,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- Template Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
@@ -578,6 +579,7 @@
 
 <!-- referral starts -->
 
+
 <div class="container form-wrapper">
   <div class="form-section" style="background: rgb(48, 34, 129);">
     <h3 class="mb-4 text-center" style="color: #fff;">Submit a Referral</h3>
@@ -657,6 +659,7 @@
       <input type="hidden" name="_captcha" value="false">
 
       <div class="text-center">
+        <div class="g-recaptcha mb-3" data-sitekey="6LciT6QrAAAAAAchMAUUqXM8f_1JC0sYBPiFqOv0"></div>
         <button type="submit" class="btn bg-white rounded-pill px-5 py-2" style="color:rgb(48, 34, 129)">Submit Referral</button>
       </div>
 
@@ -672,6 +675,14 @@
 <script>
   document.getElementById('referralForm').addEventListener('submit', async function (e) {
     e.preventDefault();
+
+    // Check if reCAPTCHA is completed
+    const captchaResponse = grecaptcha.getResponse();
+    if (!captchaResponse) {
+      alert('Please verify you are human.');
+      return;
+    }
+
 
     const form = e.target;
     const formData = new FormData(form);
@@ -698,6 +709,7 @@
     }
   });
 </script>
+
 
 
 <!-- referral ends -->
