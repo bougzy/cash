@@ -315,6 +315,35 @@
     margin-top: 25px;
   }
 }
+
+  @media (max-width: 768px) {
+            body {
+                padding-top: 270px;
+            }
+
+            .content {
+                flex-direction: column;
+            }
+
+            .text-section,
+            .image-section {
+               order: 2;
+                width: 100%;
+                padding: 0 15px;
+            }
+
+            .image-section {
+              order: 1;
+        width: 100%;
+        margin-top: 20px;
+            }
+
+            .text-section {
+            flex: 1;
+            padding: 5px;
+            margin-top: -85px;
+        }
+        }
 </style>
 
 <div class="container-fluid fixed-top px-0 bg-white">
@@ -502,10 +531,7 @@
             <div class="text-section">
                <div class="header">Home Cleaning Services</div>
                 <p>
-                  <Strong>Passion Plus</Strong> offers various services designed to support students/employees with disabilities in accessing, participating in, and succeeding in education and employment, including school, vocational training, higher education, work placement or volunteering.  
-                </p>
-                <p>
-                  We offer residential cleaning services including regular hygience maintenance, deep cleaning, and move-in/move-out cleaning. 
+                  <Strong>Passion Plus</Strong> We offer residential cleaning services including regular hygience maintenance, deep cleaning, and move-in/move-out cleaning. 
                 </p>
                 <p>
                   Using eco-friendly products, we maintain a safe environment for your family and pets. Our mission is to exceed expectations with high-quality, tailored services.

@@ -26,7 +26,7 @@
         <!-- Icon Font Stylesheet -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <!-- Libraries Stylesheet -->
         <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
         <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
@@ -138,6 +138,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+
   }
 
   .navbar-brand img {
@@ -237,29 +238,24 @@
     margin-top: 25px;
   }
 }
+
+ @media (max-width: 768px) {
+
+  .brand-title {
+    font-size: 20px !important;
+    font-weight: bold;
+    color: darkblue;
+    /* margin-top: -38px; */
+     
+  }
+
+        }
+
 </style>
 
 <div class="container-fluid fixed-top px-0 bg-white">
   <div class="container px-0">
-    <!-- Top Bar -->
-    <div class="topbar text-white">
-      <div class="row align-items-center">
-        <div class="col-12 col-md-8 text-center text-md-end mb-2 mb-md-0">
-          <div class="d-flex justify-content-center justify-content-md-end flex-wrap gap-3 small">
-            <span><i class="fas fa-envelope me-2"></i>info@passionplus.com.au</span>
-            <!-- <span><i class="fas fa-phone-alt me-2"></i>+61-426283681</span> -->
-          <span><i class="fas fa-phone-alt me-2"></i>+61493388366</span>
-          </div>
-        </div>
-        <div class="col-12 col-md-4 text-center text-md-end">
-          <div class="d-flex justify-content-center justify-content-md-end gap-2">
-            <a href="#" class="btn-square text-white"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="btn-square text-white"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
+   
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg mx-auto">
       <div class="d-flex w-100 justify-content-between align-items-center">
@@ -1220,37 +1216,53 @@ At Passion Plus, it is a service driven by Passion and Commitment to providing h
 
 
 
-       <!-- Contact Start -->
-       <div class="container-fluid py-5">
-  <div class="container py-5 border-0" style="background: rgb(1, 1, 46); color:white;" >
-    <div class="contact p-5 border-0" style="background: rgb(1, 1, 46); color:white;" >
+        <!-- Contact Start -->
+<div class="container-fluid py-2">
+  <div class="container py-5 border-0" style="background: rgb(1, 1, 46); color:white;">
+    <div class="contact p-5 border-0" style="background: rgb(1, 1, 46); color:white;">
       <div class="row g-4">
         <!-- Contact Form -->
         <div class="col-xl-5">
           <h1 class="mb-4 text-white">Get in touch</h1>
           <p class="mb-4">We'd love to hear from you! Use the form below or contact us directly with the details provided.</p>
-          <form>
+          
+          <form id="contactForm">
             <div class="row gx-4 gy-3">
               <div class="col-xl-6">
-                <input type="text" class="form-control bg-white border-0 py-3 px-4" placeholder="Your First Name">
+                <input type="text" name="First Name" class="form-control bg-white border-0 py-3 px-4" placeholder="Your First Name" required>
               </div>
               <div class="col-xl-6">
-                <input type="email" class="form-control bg-white border-0 py-3 px-4" placeholder="Your Email">
+                <input type="email" name="Email" class="form-control bg-white border-0 py-3 px-4" placeholder="Your Email" required>
               </div>
               <div class="col-xl-6">
-                <input type="text" class="form-control bg-white border-0 py-3 px-4" placeholder="Your Phone">
+                <input type="text" name="Phone" class="form-control bg-white border-0 py-3 px-4" placeholder="Your Phone">
               </div>
               <div class="col-xl-6">
-                <input type="text" class="form-control bg-white border-0 py-3 px-4" placeholder="Subject">
+                <input type="text" name="Subject" class="form-control bg-white border-0 py-3 px-4" placeholder="Subject">
               </div>
               <div class="col-12">
-                <textarea class="form-control bg-white border-0 py-3 px-4" rows="7" placeholder="Your Message"></textarea>
+                <textarea name="Message" class="form-control bg-white border-0 py-3 px-4" rows="7" placeholder="Your Message" required></textarea>
               </div>
-              <div class="col-12">
+
+              <!-- Anti-spam -->
+              <input type="text" name="_honey" style="display:none">
+              <input type="hidden" name="_captcha" value="false">
+
+              <div class="col-12 text-center">
+                <div class="g-recaptcha mb-3" data-sitekey="6LciT6QrAAAAAAchMAUUqXM8f_1JC0sYBPiFqOv0"></div>
                 <button class="btn-hover-bg btn btn-primary w-100 py-3 px-5" type="submit">Submit</button>
+              </div>
+
+
+              <!-- Success Message Placeholder -->
+              <div class="col-12">
+                <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
+                  Your message was sent successfully! This page will reload in 60 seconds.
+                </div>
               </div>
             </div>
           </form>
+
         </div>
 
         <!-- Contact Details & Map -->
@@ -1258,7 +1270,6 @@ At Passion Plus, it is a service driven by Passion and Commitment to providing h
           <div>
             <div class="row g-4">
               <div class="col-lg-4">
-                
                 <div class="bg-white text-dark p-4 text-center">
                   <i class="fas fa-envelope fa-2x text-primary mb-2"></i>
                   <h4>Mail Us</h4>
@@ -1266,12 +1277,10 @@ At Passion Plus, it is a service driven by Passion and Commitment to providing h
                 </div>
               </div>
               <div class="col-lg-4">
-                
-
                 <div class="bg-white text-dark p-4 text-center">
                   <i class="fa fa-phone-alt fa-2x text-primary mb-2"></i>
                   <h4>Telephone</h4>
-                  <p class="mb-0">+61-426-283-681</p>
+                  <p class="mb-0">+61-493-388-366</p>
                 </div>
               </div>
               <div class="col-lg-4">
@@ -1282,7 +1291,7 @@ At Passion Plus, it is a service driven by Passion and Commitment to providing h
                 </div>
               </div>
               <div class="col-lg-12">
-                <iframe class="w-100" style="height: 412px; margin-bottom: -6px;" 
+                <iframe class="w-100" style="height: 412px; margin-bottom: -6px;"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.2243791133296!2d147.35950257584968!3d-35.112384972736576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b32f3e34f4dd0ed%3A0x50609b490441420!2sWagga%20Wagga%20NSW%202650%2C%20Australia!5e0!3m2!1sen!2sau!4v1720218362385!5m2!1sen!2sau"
                   allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
@@ -1298,6 +1307,46 @@ At Passion Plus, it is a service driven by Passion and Commitment to providing h
     </div>
   </div>
 </div>
+<!-- Contact End -->
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    // Check if reCAPTCHA is completed
+    const captchaResponse = grecaptcha.getResponse();
+    if (!captchaResponse) {
+      alert('Please verify you are human.');
+      return;
+    }
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/support@passionplus.com.au', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        document.getElementById('successMessage').style.display = 'block';
+        form.reset();
+        grecaptcha.reset(); // Reset the CAPTCHA
+
+        // Reload page after 60 seconds
+        setTimeout(() => {
+          location.reload();
+        }, 60000);
+      } else {
+        alert('Error: Submission failed. Please try again.');
+      }
+    } catch (error) {
+      alert('Network error. Please check your connection.');
+    }
+  });
+</script>
+
 
         <!-- Contact End -->
 
