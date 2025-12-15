@@ -75,11 +75,7 @@
 <!-- Navbar Start -->
 
 <style>
-  /* html, body {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-  } */
+  
 
   body {
     /* padding-top: 180px; */
@@ -187,6 +183,39 @@
     white-space: nowrap;
   }
 
+  /* Contact buttons styling */
+  .contact-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: 15px;
+  }
+  
+  .contact-btn {
+    background-color: navy;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .contact-btn:hover {
+    background-color: rgb(15, 15, 90);
+    color: white;
+  }
+  
+  .nav-buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 15px;
+  }
+
   @media (max-width: 768px) {
     body {
       /* padding-top: 230px; */
@@ -236,6 +265,27 @@
   .navbar-toggler {
     margin-left: auto;
     margin-top: 25px;
+  }
+  
+  /* Mobile adjustments for buttons */
+  .nav-buttons-container {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 15px;
+    gap: 8px;
+  }
+  
+  .contact-buttons {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    gap: 8px;
+  }
+  
+  .contact-btn, .referral-btn {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -313,8 +363,16 @@
           </li>
 
           <li class="nav-item"><a class="nav-link fw-bold" href="/contact">CONTACT US</a></li>
+          
+          <!-- Contact buttons and referral button -->
           <li class="nav-item">
-            <a class="btn px-4 fw-bold text-white" href="/referral" style="background: navy;">REFERRAL</a>
+            <div class="nav-buttons-container">
+              <div class="contact-buttons">
+                <a href="mailto:info@passionplus.com" class="contact-btn">Email Us</a>
+                <a href="tel:+1234567890" class="contact-btn">Call Us</a>
+              </div>
+              <a class="btn px-4 fw-bold text-white referral-btn" href="/referral" style="background: navy;">REFERRAL</a>
+            </div>
           </li>
         </ul>
       </div>
